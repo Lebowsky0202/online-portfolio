@@ -1,0 +1,16 @@
+.siteHeader {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 20;
+	background: rgba(244, 246, 243, 0.82);
+	border-bottom: 1px solid rgba(219, 226, 220, 0.72);
+	backdrop-filter: blur(18px);
+}
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 72px;
+}

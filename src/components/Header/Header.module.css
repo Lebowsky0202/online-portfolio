@@ -14,3 +14,53 @@
 	justify-content: space-between;
 	min-height: 72px;
 }
+.brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 800;
+	color: var(--ink);
+}
+
+.brand svg {
+	color: var(--teal);
+}
+.navToggle {
+	display: none;
+	place-items: center;
+	width: 44px;
+	height: 44px;
+	color: var(--ink);
+	background: var(--white);
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	cursor: pointer;
+}
+.navLinks {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.navLinks a {
+	display: inline-flex;
+	align-items: center;
+	min-height: 42px;
+	padding: 0 14px;
+	color: #33403c;
+	border-radius: 8px;
+	transition:
+		color 180ms ease,
+		background 180ms ease;
+}
+
+.navLinks a:hover,
+.navLinks a:focus-visible {
+	color: var(--dark);
+	background: rgba(72, 182, 170, 0.14);
+}
+.navLinksOpen {
+	transform: translateY(0);
+	opacity: 1;
+	pointer-events: auto;
+}

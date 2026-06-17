@@ -10,13 +10,13 @@ export const Header = () => {
 	return (
 		<header className={cls.siteHeader}>
 			<nav className={`${cls.nav} container`} aria-label='Основная навигация'>
-				<a className='brand' href='#home' onClick={closeMenu}>
+				<a className={cls.brand} href='#home' onClick={closeMenu}>
 					<SquareCode size={24} aria-hidden='true' />
 					<span>Куат Сагатович</span>
 				</a>
 
 				<button
-					className='nav__toggle'
+					className={cls.navToggle}
 					type='button'
 					aria-label={isMenuOpen ? 'Закрыть меню' : 'Открыть меню'}
 					aria-expanded={isMenuOpen}
@@ -25,7 +25,9 @@ export const Header = () => {
 					{isMenuOpen ? <X size={22} /> : <Menu size={22} />}
 				</button>
 
-				<div className={`nav__links ${isMenuOpen ? 'nav__links--open' : ''}`}>
+				<div
+					className={`${cls.navLinks} ${isMenuOpen ? cls.navLinksOpen : ''}`}
+				>
 					{navItems.map(item => (
 						<a key={item.href} href={item.href} onClick={closeMenu}>
 							{item.label}
